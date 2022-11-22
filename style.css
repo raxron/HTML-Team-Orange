@@ -6,11 +6,6 @@ body {
 *{
     box-sizing: border-box;
 }
-/*cursor for labels*/
-label {
-    cursor: pointer;
-}
-
 /*navbar starts*/
 .navContainer {
     background-color: black;
@@ -215,6 +210,7 @@ display: block;
 .introImg1 img{
     width: 100%;
     height: auto;
+    object-fit: contain;
 }
 .intro-title-sub{
     color: white;
@@ -343,7 +339,7 @@ display: block;
 }
 .portrait img{
     width: 100%;
-    max-width: 600px;
+    max-width: 100%;
     height: auto;
 
 }
@@ -363,22 +359,46 @@ display: block;
 /*grid*/
 
 .portraitContainer{
-    padding-right: 5vw;
-    padding-top: 20px;
-    padding-bottom: 50px;
+    margin-top: 0.15vh;
+    border-top: 0.5vh double black;
+    
+    padding-top: 1vh;
+    padding-bottom: 1vh;
     display: grid;
     grid-template:
-    "z a . g s" 
-    "z a . g s" 3.25vw
+    "z a sl g s" 
     "z b f h s" 3.25vw
     "z c f i s" 10vw
-    "z y f w s" 
-    "z l e m s" 3.25vw
-    "z l d m s" 10vw
-    "z l x m s"
-    "z k x n s"
-    "z j . o s" 10vw
+    "z y f w s" 25vw
+    "z l e m ." 3.25vw
+    "z l d m ." 10vw
+    "z l x m ." 
+    "z k x n ."
+    "z j . o ." 10vw
     ;
+}
+.s{
+    grid-area: s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+}
+.space{
+    position: absolute;
+    padding-top: 15vw;
+    writing-mode: vertical-rl;
+    width: 1.8vw;
+    font-family: 'GFS Didot', serif;
+    font-size: 2vw;
+}
+.space1{
+    position: absolute;
+    padding-top: 2vw;
+    padding-bottom: 10vw;
+    writing-mode: vertical-rl;
+    width: 1.8vw;
+    font-family: 'GFS Didot', serif;
+    font-size: 2vw;
 }
 .portraitU{
     visibility: hidden;
@@ -393,7 +413,7 @@ display: block;
     grid-area: z;
     writing-mode: vertical-lr;
     font-family: 'GFS Didot', serif;
-    font-size: 24px;
+    font-size: 2vw;
 }
 .portraitA{
     grid-area: a;
@@ -406,6 +426,7 @@ display: block;
 }
 .portraitL{
     grid-area: l;
+    transform: scaleX(-1);
 }
 .portraitM{
     grid-area: m;
@@ -457,22 +478,6 @@ display: block;
     font-size:7.8vw;
     overflow: hidden;
 }
-.s{
-    grid-area: s;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5vw;
-}
-.space{
-    writing-mode: vertical-rl;
-    width: 1.5vw;
-    font-family: 'GFS Didot', serif;
-    font-size: 18px;
-}
-.space1{
-    background-color:  rgb(0, 0, 0);
-    width: 5vw;
-}
 
 @media screen and (max-width:600px) {
 
@@ -486,16 +491,10 @@ display: block;
     grid-template:
     "z z"
     "a f" 
-    "a f" 
-    "b e" 
     "c d" 
     "g l" 
-    "g l"
-    "h k"
     "i j"
     "m u"
-    "m u"
-    "n ."
     "o v"
     ;
 }
