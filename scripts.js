@@ -15,3 +15,4 @@ function openProfile(){
     profileToggle.classList.toggle("active");
     profileDropdown.classList.toggle("active");
 }
+

@@ -260,7 +260,7 @@ display: block;
     position: absolute;
     font-size: 1.5vw;
     top: 90%;
-    left: 84%;
+    left: 85.5%;
     cursor: pointer;
 }
 .intro-explore:hover{
@@ -361,7 +361,6 @@ display: block;
 .portraitContainer{
     margin-top: 0.15vh;
     border-top: 0.5vh double black;
-    
     padding-top: 1vh;
     padding-bottom: 1vh;
     display: grid;
@@ -530,4 +529,91 @@ display: block;
 .bodyIntroBot{
     background-color: rgba(255,215,0,1);
 }
+}
+
+/*Footer*/
+.footer{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+.footer-map{
+ filter: grayscale(100%);   
+}
+.footer-map:hover{
+    filter: grayscale(0);
+}
+.footer-contact{
+    font-family: 'GFS Didot', serif;
+    font-size: 16px;
+    padding-top: 30px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.footer-contact-sub{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.footer-contact-split{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.footer-contact-info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.footer-msg{
+    font-family: 'GFS Didot', serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.footer-select-msg{
+    font-family: 'GFS Didot', serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;gap: 5px;
+}
+
+.footer-msg input[type=text]{
+    background-color: rgba(250, 250, 250,0.15);
+    height: 100px;
+    color: white;
+    font: 16px;
+}
+.footer-contact-info input[type=text],
+.footer-contact-info input[type=email],
+.footer-contact-info input[type=tel]{
+    background-color: rgba(250, 250, 250,0.15);
+    font: 16px;
+    color: white;
+}
+.footer-select select{
+    background-color: rgba(250, 250, 250,0.15);
+    font: 16px;
+    color: rgba(250,250,250,0.5);
+}
+.footer-contact-info input[type=text]:focus,
+.footer-contact-info input[type=email]:focus,
+.footer-contact-info input[type=tel]:focus,
+.footer-select select:focus{
+    background-color: rgb(205,133,63); 
+}
+.footer-submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-submit button{
+    width: 200px;
 }
