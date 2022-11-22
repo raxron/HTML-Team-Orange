@@ -206,11 +206,15 @@ display: block;
     
 }
 .introImg1{
-    padding-left: 5%;
+    padding-left: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
     animation: slide1 30s infinite;
+}
+.introImg1 img{
+    width: 100%;
+    height: auto;
 }
 .intro-title-mafia{
     color: white;
@@ -237,10 +241,10 @@ display: block;
     position: absolute;
     top: 0;
     left: 0px;
-    border-right: 1px solid rgb(255,215,0) ;
-    color: rgb(255,215,0);
+    border-right: 1px solid rgb(205,133,63) ;
+    color: rgb(205,133,63);
     overflow: hidden;
-    animation: text 3s linear 1;
+    animation: text 3s linear infinite;
 }
 
 @keyframes text{
@@ -268,23 +272,20 @@ display: block;
     text-decoration: underline;
 }
 .intro-circle{
-    width: 42%;
-    height: 90%;
+    width: 40%;
+    height: 50%;
     color: white;
     position: absolute;
     font-family: 'GFS Didot', serif;
     font-size: 1vw;
-    top: 6%;
-    left: 30%;
+    top: 22%;
+    left: 33%;
     border: 2px solid rgba(250, 250, 250,0.1);
     box-shadow: 0.35vw 0.5vw rgba(255, 250, 225, 0.3);
     filter: blur(0.05vw);
     border-radius: 100%;
 }
-.introImg1 img{
-    width: 82%;
-    height: auto;
-}
+
 
 @keyframes slide1{
     0%{
@@ -311,6 +312,7 @@ display: block;
         border-bottom: 2px solid rgba(250,250,250,0.2);
     }
     .introImg1{
+
         width: 100%;
         animation: none;
     }
@@ -383,17 +385,18 @@ display: block;
     padding-right: 5vw;
     display: grid;
     grid-template:
-    "z a d g" 
-    "z a e g" 3.25vw
-    "z b f h" 3.25vw
-    "z c f i" 10vw
-    "z y f w" 
-    "z l . m" 12vw
-    "z l x m"
-    "z k . n"
-    "z j . o"
+    "z a d g s" 
+    "z a e g s" 3.25vw
+    "z b f h s" 3.25vw
+    "z c f i s" 10vw
+    "z y f w s" 
+    "z l . m s" 12vw
+    "z l x m s"
+    "z k . n s"
+    "z j . o s"
     ;
 }
+
 .body-title{
     display: flex;
     justify-content: flex-end;
