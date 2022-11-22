@@ -216,7 +216,7 @@ display: block;
     width: 100%;
     height: auto;
 }
-.intro-title-mafia{
+.intro-title-sub{
     color: white;
     text-shadow: 
     0 0 0.5vw white,
@@ -224,8 +224,8 @@ display: block;
     position: absolute;
     font-family: 'GFS Didot', serif;
     font-size: 5vw;
-    top: 43%;
-    left: 13%;
+    top: 30%;
+    left: 5%;
     cursor: default;
 }
 .intro-title{
@@ -233,8 +233,8 @@ display: block;
     position: absolute;
     font-family: 'GFS Didot', serif;
     font-size: 5vw;
-    top: 30%;
-    left: 5%;
+    top: 48%;
+    left: 15.5%;
 }
 .intro-title::before{
     content: attr(data-text);
@@ -334,35 +334,18 @@ display: block;
 }
 
 .bodyIntroBot{
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    font-family: 'GFS Didot', serif;
+    font-size: 14px;
 }
-.bodyIntroTop{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-}
-
 .portrait img{
     width: 100%;
     max-width: 600px;
     height: auto;
 
-}
-.socialMediaTop{
-    width: 100%;
-    max-height: 3.25vw;
-  
-    padding-top: 0.25vw;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 30px;
-    font-size: 2.5vw;
 }
 .socialMediaBot{
     width: 100%;
@@ -380,23 +363,29 @@ display: block;
 /*grid*/
 
 .portraitContainer{
+    padding-right: 5vw;
     padding-top: 20px;
     padding-bottom: 50px;
-    padding-right: 5vw;
     display: grid;
     grid-template:
-    "z a d g s" 
-    "z a e g s" 3.25vw
+    "z a . g s" 
+    "z a . g s" 3.25vw
     "z b f h s" 3.25vw
     "z c f i s" 10vw
     "z y f w s" 
-    "z l . m s" 12vw
+    "z l e m s" 3.25vw
+    "z l d m s" 10vw
     "z l x m s"
-    "z k . n s"
-    "z j . o s"
+    "z k x n s"
+    "z j . o s" 10vw
     ;
 }
-
+.portraitU{
+    visibility: hidden;
+}
+.introV{
+    visibility: hidden;
+}
 .body-title{
     display: flex;
     justify-content: flex-end;
@@ -468,7 +457,22 @@ display: block;
     font-size:7.8vw;
     overflow: hidden;
 }
-
+.s{
+    grid-area: s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+}
+.space{
+    writing-mode: vertical-rl;
+    width: 1.5vw;
+    font-family: 'GFS Didot', serif;
+    font-size: 18px;
+}
+.space1{
+    background-color:  rgb(0, 0, 0);
+    width: 5vw;
+}
 
 @media screen and (max-width:600px) {
 
@@ -489,11 +493,22 @@ display: block;
     "g l"
     "h k"
     "i j"
-    "m ."
-    "m ."
+    "m u"
+    "m u"
     "n ."
-    "o ."
+    "o v"
     ;
+}
+.s{
+    display: none;
+}
+.portraitU{
+    grid-area: u;
+    visibility: visible;
+}
+.introV{
+    grid-area: v;
+    visibility: visible;
 }
 .socialB,
 .socialE,
@@ -513,11 +528,7 @@ display: block;
     justify-content: center;
     border-bottom: 2px solid rgba(250,250,250,0.2);
 }
-.introC,
-.introD,
-.introI,
-.introJ,
-.introO{
+.bodyIntroBot{
     background-color: rgba(255,215,0,1);
 }
 }
