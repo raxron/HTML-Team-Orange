@@ -607,13 +607,24 @@ display: block;
 .footer-contact-info input[type=email]:focus,
 .footer-contact-info input[type=tel]:focus,
 .footer-select select:focus{
-    background-color: rgb(205,133,63); 
+    background-color: rgb(205,133,63);
+    color: white; 
 }
 .footer-submit{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-left: 36%;
 }
 .footer-submit button{
-    width: 200px;
+     background-color: rgba(0, 0, 0);
+     font-family: 'GFS Didot', serif;
+    font: 16px;
+    width: 295px;
+    height: 30px;
+    color: white;
+
+}
+.footer-submit button:hover{
+    background-color: rgb(205,133,63);
 }
