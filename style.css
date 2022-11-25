@@ -3,15 +3,17 @@ body {
     width: 100%;
     margin: 0;
 }
-*{
+
+* {
     box-sizing: border-box;
 }
+
 /*navbar starts*/
 .navContainer {
     background-color: black;
     width: 100%;
     height: 65px;
-    border-bottom: 2px solid rgba(250,250,250,0.2);
+    border-bottom: 2px solid rgba(250, 250, 250, 0.2);
     top: 0;
     position: sticky;
     z-index: 2;
@@ -53,18 +55,20 @@ body {
 }
 
 .navIcons a:hover {
-    color: rgb(205,133,63);
+    color: rgb(205, 133, 63);
 }
-.navIconsContent{
+
+.navIconsContent {
     z-index: 1;
 }
+
 /*Profile Dropdown*/
 .profileDropdown {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 66px;
     right: 0;
-    background-color: rgb(205,133,63);
+    background-color: rgb(205, 133, 63);
     width: 190px;
     z-index: 1;
     padding-left: 0;
@@ -72,11 +76,13 @@ body {
 
 .profileDropdown li {
     list-style: none;
-    border-top: 2px solid rgba(250,250,250,0.2)
+    border-top: 2px solid rgba(250, 250, 250, 0.2)
 }
-.profileDropdown li:first-child{
+
+.profileDropdown li:first-child {
     border-top: none;
 }
+
 .profileDropdown li a {
     width: 200px;
     margin-left: 0;
@@ -86,26 +92,30 @@ body {
 }
 
 .profileDropdown li:hover {
-    background-color: rgba(0, 0, 0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .profileDropdown li a:hover {
     color: white;
 }
-.profileToggle{
+
+.profileToggle {
     cursor: pointer;
 }
-.profileToggle.active .fa{
-transform: rotate(180deg);
+
+.profileToggle.active .fa {
+    transform: rotate(180deg);
 }
-.profileDropdown.active{
-display: block;
+
+.profileDropdown.active {
+    display: block;
 }
+
 .navHambuger {
     display: none;
 }
 
-.bar{
+.bar {
     display: block;
     width: 20px;
     height: 2px;
@@ -117,7 +127,8 @@ display: block;
 /*Mobile Nav Responsive*/
 @media screen and (max-width:600px) {
     .navContainer {
-        height: 50px;
+        height: 55px;
+
     }
 
     .navTitle a {
@@ -130,16 +141,17 @@ display: block;
     }
 
     .navIconsContent {
-        z-index:1;                  
+        z-index: 1;
         width: 100%;
         position: absolute;
         background-color: black;
-        margin-top: 50px;
+        margin-top: 55px;
         padding-left: 0;
-        left:-100%;
+        left: -100%;
         border-bottom: 1px solid white;
     }
-    .navIconsContent.active{
+
+    .navIconsContent.active {
         left: 0;
     }
 
@@ -161,11 +173,11 @@ display: block;
         display: block;
         color: white;
         float: right;
-        margin:  14px 16px 14px;
+        margin: 14px 16px 14px;
     }
 
     .profileDropdown {
-        background-color: rgb(205,133,63);
+        background-color: rgb(205, 133, 63);
         display: none;
         position: relative;
         top: 10px;
@@ -180,46 +192,55 @@ display: block;
         padding-top: 0px;
 
     }
+
     .navIcons li a:hover {
-        color: rgb(218,165,32);
+        color: rgb(218, 165, 32);
 
     }
-    .navHambuger.active .bar:nth-child(1){
-        transform:translateY(5px)rotate(45deg);}
-    .navHambuger.active .bar:nth-child(2){
+
+    .navHambuger.active .bar:nth-child(1) {
+        transform: translateY(5px)rotate(45deg);
+    }
+
+    .navHambuger.active .bar:nth-child(2) {
         transform: translateY(-2px)rotate(-45deg);
     }
-    .navHambuger.active .bar:nth-child(3){
+
+    .navHambuger.active .bar:nth-child(3) {
         display: none;
-    }}
+    }
+}
 
 /**/
-.introBG{
+.introBG {
     width: 100%;
     height: auto;
     background-color: black;
     position: relative;
     top: 0px;
     overflow: hidden;
-    
+
 }
-.introImg1{
+
+.introImg1 {
     padding-left: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
     animation: slide1 30s infinite;
 }
-.introImg1 img{
+
+.introImg1 img {
     width: 100%;
     height: auto;
     object-fit: contain;
 }
-.intro-title-sub{
+
+.intro-title-sub {
     color: white;
-    text-shadow: 
-    0 0 0.5vw white,
-    0 0 1vw rgb(255,215,0) ;
+    text-shadow:
+        0 0 0.5vw white,
+        0 0 1vw rgb(255, 215, 0);
     position: absolute;
     font-family: 'GFS Didot', serif;
     font-size: 5vw;
@@ -227,50 +248,56 @@ display: block;
     left: 5%;
     cursor: default;
 }
-.intro-title{
-    border-color:1px solid rgba(250,250,250,0.5);
+
+.intro-title {
+    border-color: 1px solid rgba(250, 250, 250, 0.5);
     position: absolute;
     font-family: 'GFS Didot', serif;
     font-size: 5vw;
     top: 45%;
     left: 15.5%;
 }
-.intro-title::before{
+
+.intro-title::before {
     content: attr(data-text);
     position: absolute;
     top: 0;
     left: 0px;
-    border-right: 1px solid rgb(205,133,63) ;
-    color: rgb(205,133,63);
+    border-right: 1px solid rgb(205, 133, 63);
+    color: rgb(205, 133, 63);
     overflow: hidden;
     animation: text 3s linear infinite;
 }
 
-@keyframes text{
-    0%{
+@keyframes text {
+    0% {
         width: 0%;
     }
-    40%,100%{
+
+    40%,
+    100% {
         width: 100%;
     }
 }
 
-.intro-explore{
+.intro-explore {
     color: white;
-    text-shadow: 
-    0 0 0.5vw white,
-    0 0 1vw rgb(255,215,0) ;
+    text-shadow:
+        0 0 0.5vw white,
+        0 0 1vw rgb(255, 215, 0);
     position: absolute;
     font-size: 1.5vw;
     top: 90%;
     left: 85.5%;
     cursor: pointer;
 }
-.intro-explore:hover{
-    color: rgb(255,215,0);
+
+.intro-explore:hover {
+    color: rgb(255, 215, 0);
     text-decoration: underline;
 }
-.intro-circle{
+
+.intro-circle {
     width: 40%;
     height: 50%;
     color: white;
@@ -279,43 +306,49 @@ display: block;
     font-size: 1vw;
     top: 22%;
     left: 33%;
-    border: 2px solid rgba(250, 250, 250,0.1);
+    border: 2px solid rgba(250, 250, 250, 0.1);
     box-shadow: 0.35vw 0.5vw rgba(255, 250, 225, 0.3);
     filter: blur(0.05vw);
     border-radius: 100%;
 }
 
 
-@keyframes slide1{
-    0%{
+@keyframes slide1 {
+    0% {
         transform: rotate(0deg);
     }
-    25%{
+
+    25% {
         transform: rotate(30deg);
     }
-    50%{
+
+    50% {
         transform: rotate(0deg);
     }
-    75%{
+
+    75% {
         transform: rotate(-30deg);
     }
-    100%{
+
+    100% {
         transform: rotate(0deg);
     }
 }
 
 
-@media screen and (max-width:600px)  {
-    .introBG{
-        max-height: 200px;
-        border-bottom: 2px solid rgba(250,250,250,0.2);
+@media screen and (max-width:600px) {
+    .introBG {
+        max-height: 220px;
+        border-bottom: 2px solid rgba(250, 250, 250, 0.2);
     }
-    .introImg1{
+
+    .introImg1 {
 
         width: 100%;
         animation: none;
     }
-    .intro-explore{
+
+    .intro-explore {
         color: white;
         position: absolute;
         font-size: 1.5vw;
@@ -327,12 +360,12 @@ display: block;
 
 
 /*body*/
-.portrait{
+.portrait {
     display: flex;
     justify-content: center
 }
 
-.bodyIntroBot{
+.bodyIntroBot {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -340,16 +373,18 @@ display: block;
     font-family: 'GFS Didot', serif;
     font-size: 14px;
 }
-.portrait img{
+
+.portrait img {
     width: 100%;
     max-width: 100%;
     height: auto;
 
 }
-.socialMediaBot{
+
+.socialMediaBot {
     width: 100%;
     max-height: 3.25vw;
-    background-color: rgb(255,215,0);
+    background-color: rgb(255, 215, 0);
     padding-top: 0.25vw;
     padding-bottom: 0.25vw;
     display: flex;
@@ -357,35 +392,38 @@ display: block;
     justify-content: center;
     gap: 30px;
     font-size: 2.5vw;
-    
+
 }
+
 /*grid*/
 
-.portraitContainer{
+.portraitContainer {
     margin-top: 0.15vh;
     border-top: 0.5vh double black;
     padding-top: 1vh;
     padding-bottom: 1vh;
     display: grid;
     grid-template:
-    "z a sl g s" 
-    "z b f h s" 3.25vw
-    "z c f i s" 10vw
-    "z y f w s" 25vw
-    "z l e m ." 3.25vw
-    "z l d m ." 10vw
-    "z l x m ." 
-    "z k x n ."
-    "z j . o ." 10vw
+        "z a sl g s"
+        "z b f h s" 3.25vw
+        "z c f i s" 10vw
+        "z y f w s" 25vw
+        "z l e m ." 3.25vw
+        "z l d m ." 10vw
+        "z l x m ."
+        "z k x n ."
+        "z j . o ." 10vw
     ;
 }
-.s{
+
+.s {
     grid-area: s;
     display: flex;
     flex-direction: column;
     gap: 0.5vw;
 }
-.space{
+
+.space {
     position: absolute;
     padding-top: 15vw;
     writing-mode: vertical-rl;
@@ -393,7 +431,8 @@ display: block;
     font-family: 'GFS Didot', serif;
     font-size: 2vw;
 }
-.space1{
+
+.space1 {
     position: absolute;
     padding-top: 2vw;
     padding-bottom: 10vw;
@@ -402,13 +441,16 @@ display: block;
     font-family: 'GFS Didot', serif;
     font-size: 2vw;
 }
-.portraitU{
+
+.portraitU {
     visibility: hidden;
 }
-.introV{
+
+.introV {
     visibility: hidden;
 }
-.body-title{
+
+.body-title {
     display: flex;
     justify-content: flex-end;
     transform: rotate(180deg);
@@ -417,137 +459,165 @@ display: block;
     font-family: 'GFS Didot', serif;
     font-size: 2vw;
 }
-.portraitA{
+
+.portraitA {
     grid-area: a;
 }
-.portraitF{
+
+.portraitF {
     grid-area: f;
 }
-.portraitG{
+
+.portraitG {
     grid-area: g;
 }
-.portraitL{
+
+.portraitL {
     grid-area: l;
     transform: scaleX(-1);
 }
-.portraitM{
+
+.portraitM {
     grid-area: m;
 }
-.socialB{
+
+.socialB {
     grid-area: b;
 }
-.socialE{
+
+.socialE {
     grid-area: e;
 }
-.socialH{
+
+.socialH {
     grid-area: h;
 }
-.socialK{
+
+.socialK {
     grid-area: k;
 }
-.socialN{
+
+.socialN {
     grid-area: n;
 }
-.introC{
-    grid-area:c;
+
+.introC {
+    grid-area: c;
 }
-.introD{
-    grid-area:d;
+
+.introD {
+    grid-area: d;
 }
-.introI{
-    grid-area:i;
+
+.introI {
+    grid-area: i;
 }
-.introJ{
-    grid-area:j;
+
+.introJ {
+    grid-area: j;
 }
-.introO{
-    grid-area:o;
+
+.introO {
+    grid-area: o;
 }
-.bodyX{
+
+.bodyX {
     padding-left: 20%;
-    grid-area:x;
+    grid-area: x;
     text-shadow: -60px 60px rgba(0, 0, 0, 0.1);
-    color: rgba(255,215,0,0.2);
+    color: rgba(255, 215, 0, 0.2);
     font-family: 'GFS Didot', serif;
-    font-size:8vw;
+    font-size: 8vw;
     overflow: hidden;
 }
-.bodyY{
-    grid-area:y;
-    text-shadow: 50px 50px rgba(255,215,0,0.2);
+
+.bodyY {
+    grid-area: y;
+    text-shadow: 50px 50px rgba(255, 215, 0, 0.2);
     color: rgba(0, 0, 0, 0.1);
     font-family: 'GFS Didot', serif;
-    font-size:7.8vw;
+    font-size: 7.8vw;
     overflow: hidden;
 }
 
 @media screen and (max-width:600px) {
 
-.portraitContainer{
-    z-index: 1;
-    padding-top: 0px;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 50px;
-    display: grid;
-    grid-template:
-    "z z"
-    "a f" 
-    "c d" 
-    "g l" 
-    "i j"
-    "m u"
-    "o v"
-    ;
-}
-.s{
-    display: none;
-}
-.portraitU{
-    grid-area: u;
-    visibility: visible;
-}
-.introV{
-    grid-area: v;
-    visibility: visible;
-}
-.socialB,
-.socialE,
-.socialH,
-.socialK,
-.socialN,
-.bodyX,
-.bodyY{
-    display: none;
-}
-.body-title{
-    background-color: black;
-    color: white;
-    writing-mode:unset;
-    transform: rotate(0deg);
-    font-size: 2vw;
-    justify-content: center;
-    border-bottom: 2px solid rgba(250,250,250,0.2);
-}
-.bodyIntroBot{
-    background-color: rgba(255,215,0,1);
-}
+    .portraitContainer {
+        border-top: 0.5vh double black;
+        z-index: 1;
+        padding-top: 0px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        display: grid;
+        grid-template:
+            "z z" 
+            "a f" 
+            "c d"
+            "g l"
+            "i j"
+            "m u"
+            "o v"
+        ;
+    }
+
+    .s,
+    .sl {
+        display: none;
+    }
+
+    .portraitU {
+        grid-area: u;
+        visibility: visible;
+    }
+
+    .introV {
+        grid-area: v;
+        visibility: visible;
+    }
+
+    .socialB,
+    .socialE,
+    .socialH,
+    .socialK,
+    .socialN,
+    .bodyX,
+    .bodyY {
+        display: none;
+    }
+
+    .body-title {
+        background-color: black;
+        color: white;
+        writing-mode: unset;
+        transform: rotate(0deg);
+        font-size: 2vw;
+        justify-content: center;
+        border-bottom: 2px solid rgba(250, 250, 250, 0.2);
+    }
+
+    .bodyIntroBot {
+        background-color: rgba(255, 215, 0, 1);
+    }
 }
 
 /*Footer*/
-.footer{
+.footer {
     background-color: black;
     display: flex;
     flex-direction: column;
     padding-bottom: 30px;
 }
-.footer-map{
- filter: grayscale(100%);   
+
+.footer-map {
+    filter: grayscale(100%);
 }
-.footer-map:hover{
+
+.footer-map:hover {
     filter: grayscale(0);
 }
-.footer-contact{
+
+.footer-contact {
     font-family: 'GFS Didot', serif;
     font-size: 16px;
     padding-top: 30px;
@@ -559,75 +629,119 @@ display: block;
     justify-content: center;
     gap: 50px;
 }
-.footer-contact-sub{
+
+.footer-contact-sub {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-.footer-contact-split{
+
+.footer-contact-split {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
-.footer-contact-info{
+
+.footer-contact-info {
     display: flex;
     flex-direction: column;
     gap: 5px;
-}
-.footer-msg{
-    font-family: 'GFS Didot', serif;
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-.footer-select-msg{
-    font-family: 'GFS Didot', serif;
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;gap: 5px;
 }
 
-.footer-msg input[type=text]{
-    background-color: rgba(250, 250, 250,0.15);
+.footer-msg {
+    font-family: 'GFS Didot', serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-select-msg {
+    font-family: 'GFS Didot', serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-msg input[type=text] {
+    background-color: rgba(250, 250, 250, 0.15);
     height: 100px;
     color: white;
     font: 16px;
 }
+
 .footer-contact-info input[type=text],
 .footer-contact-info input[type=email],
-.footer-contact-info input[type=tel]{
-    background-color: rgba(250, 250, 250,0.15);
+.footer-contact-info input[type=tel] {
+    background-color: rgba(250, 250, 250, 0.15);
     font: 16px;
     color: white;
 }
-.footer-select select{
-    background-color: rgba(250, 250, 250,0.15);
+
+.footer-select select {
+    background-color: rgba(250, 250, 250, 0.15);
     font: 16px;
-    color: rgba(250,250,250,0.5);
+    color: rgba(250, 250, 250, 0.5);
 }
+
 .footer-contact-info input[type=text]:focus,
 .footer-contact-info input[type=email]:focus,
 .footer-contact-info input[type=tel]:focus,
-.footer-select select:focus{
-    background-color: rgb(205,133,63);
-    color: white; 
+.footer-select select:focus {
+    background-color: rgb(205, 133, 63);
+    color: white;
 }
-.footer-submit{
+
+.footer-submit {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-left: 36%;
 }
-.footer-submit button{
-     background-color: rgba(0, 0, 0);
-     font-family: 'GFS Didot', serif;
+
+.footer-submit button {
+    background-color: rgba(0, 0, 0);
+    font-family: 'GFS Didot', serif;
     font: 16px;
     width: 295px;
-    height: 30px;
+    min-height: 30px;
     color: white;
 
 }
-.footer-submit button:hover{
-    background-color: rgb(205,133,63);
+
+.footer-submit button:hover {
+    background-color: rgb(205, 133, 63);
+}
+
+@media screen and (max-width:600px) {
+    .footer {
+        overflow: hidden;
+        flex-direction: column-reverse;
+        padding-bottom: 0;
+    }
+
+    .footer-map {
+        padding-bottom: 0;
+  filter: none;
+    }
+
+    .footer-contact {
+        padding-bottom: 40px;
+        padding-top: 20px;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+.footer-contact-split {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.footer-submit {
+
+    padding-left: 0;
+}
 }

@@ -3,15 +3,17 @@ body {
     width: 100%;
     margin: 0;
 }
-*{
+
+* {
     box-sizing: border-box;
 }
+
 /*navbar starts*/
 .navContainer {
     background-color: black;
     width: 100%;
     height: 65px;
-    border-bottom: 2px solid rgba(250,250,250,0.2);
+    border-bottom: 2px solid rgba(250, 250, 250, 0.2);
     top: 0;
     position: sticky;
     z-index: 2;
@@ -53,18 +55,20 @@ body {
 }
 
 .navIcons a:hover {
-    color: rgb(205,133,63);
+    color: rgb(205, 133, 63);
 }
-.navIconsContent{
+
+.navIconsContent {
     z-index: 1;
 }
+
 /*Profile Dropdown*/
 .profileDropdown {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 66px;
     right: 0;
-    background-color: rgb(205,133,63);
+    background-color: rgb(205, 133, 63);
     width: 190px;
     z-index: 1;
     padding-left: 0;
@@ -72,11 +76,13 @@ body {
 
 .profileDropdown li {
     list-style: none;
-    border-top: 2px solid rgba(250,250,250,0.2)
+    border-top: 2px solid rgba(250, 250, 250, 0.2)
 }
-.profileDropdown li:first-child{
+
+.profileDropdown li:first-child {
     border-top: none;
 }
+
 .profileDropdown li a {
     width: 200px;
     margin-left: 0;
@@ -86,26 +92,30 @@ body {
 }
 
 .profileDropdown li:hover {
-    background-color: rgba(0, 0, 0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .profileDropdown li a:hover {
     color: white;
 }
-.profileToggle{
+
+.profileToggle {
     cursor: pointer;
 }
-.profileToggle.active .fa{
-transform: rotate(180deg);
+
+.profileToggle.active .fa {
+    transform: rotate(180deg);
 }
-.profileDropdown.active{
-display: block;
+
+.profileDropdown.active {
+    display: block;
 }
+
 .navHambuger {
     display: none;
 }
 
-.bar{
+.bar {
     display: block;
     width: 20px;
     height: 2px;
@@ -117,7 +127,8 @@ display: block;
 /*Mobile Nav Responsive*/
 @media screen and (max-width:600px) {
     .navContainer {
-        height: 50px;
+        height: 55px;
+
     }
 
     .navTitle a {
@@ -130,16 +141,17 @@ display: block;
     }
 
     .navIconsContent {
-        z-index:1;                  
+        z-index: 1;
         width: 100%;
         position: absolute;
         background-color: black;
-        margin-top: 50px;
+        margin-top: 55px;
         padding-left: 0;
-        left:-100%;
+        left: -100%;
         border-bottom: 1px solid white;
     }
-    .navIconsContent.active{
+
+    .navIconsContent.active {
         left: 0;
     }
 
@@ -161,11 +173,11 @@ display: block;
         display: block;
         color: white;
         float: right;
-        margin:  14px 16px 14px;
+        margin: 14px 16px 14px;
     }
 
     .profileDropdown {
-        background-color: rgb(205,133,63);
+        background-color: rgb(205, 133, 63);
         display: none;
         position: relative;
         top: 10px;
@@ -180,36 +192,44 @@ display: block;
         padding-top: 0px;
 
     }
+
     .navIcons li a:hover {
-        color: rgb(218,165,32);
+        color: rgb(218, 165, 32);
 
     }
-    .navHambuger.active .bar:nth-child(1){
-        transform:translateY(5px)rotate(45deg);}
-    .navHambuger.active .bar:nth-child(2){
+
+    .navHambuger.active .bar:nth-child(1) {
+        transform: translateY(5px)rotate(45deg);
+    }
+
+    .navHambuger.active .bar:nth-child(2) {
         transform: translateY(-2px)rotate(-45deg);
     }
-    .navHambuger.active .bar:nth-child(3){
+
+    .navHambuger.active .bar:nth-child(3) {
         display: none;
-    }}
+    }
+}
 
-  
-    
+ 
 
-    /*Footer*/
-.footer{
+/*Footer*/
+.footer {
     background-color: black;
     display: flex;
     flex-direction: column;
     padding-bottom: 30px;
 }
-.footer-map{
- filter: grayscale(100%);   
+
+.footer-map {
+    filter: grayscale(100%);
 }
-.footer-map:hover{
+
+.footer-map:hover {
     filter: grayscale(0);
 }
-.footer-contact{
+
+.footer-contact {
     font-family: 'GFS Didot', serif;
     font-size: 16px;
     padding-top: 30px;
@@ -221,75 +241,119 @@ display: block;
     justify-content: center;
     gap: 50px;
 }
-.footer-contact-sub{
+
+.footer-contact-sub {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-.footer-contact-split{
+
+.footer-contact-split {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
-.footer-contact-info{
+
+.footer-contact-info {
     display: flex;
     flex-direction: column;
     gap: 5px;
-}
-.footer-msg{
-    font-family: 'GFS Didot', serif;
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-.footer-select-msg{
-    font-family: 'GFS Didot', serif;
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;gap: 5px;
 }
 
-.footer-msg input[type=text]{
-    background-color: rgba(250, 250, 250,0.15);
+.footer-msg {
+    font-family: 'GFS Didot', serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-select-msg {
+    font-family: 'GFS Didot', serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-msg input[type=text] {
+    background-color: rgba(250, 250, 250, 0.15);
     height: 100px;
     color: white;
     font: 16px;
 }
+
 .footer-contact-info input[type=text],
 .footer-contact-info input[type=email],
-.footer-contact-info input[type=tel]{
-    background-color: rgba(250, 250, 250,0.15);
+.footer-contact-info input[type=tel] {
+    background-color: rgba(250, 250, 250, 0.15);
     font: 16px;
     color: white;
 }
-.footer-select select{
-    background-color: rgba(250, 250, 250,0.15);
+
+.footer-select select {
+    background-color: rgba(250, 250, 250, 0.15);
     font: 16px;
-    color: rgba(250,250,250,0.5);
+    color: rgba(250, 250, 250, 0.5);
 }
+
 .footer-contact-info input[type=text]:focus,
 .footer-contact-info input[type=email]:focus,
 .footer-contact-info input[type=tel]:focus,
-.footer-select select:focus{
-    background-color: rgb(205,133,63);
-    color: white; 
+.footer-select select:focus {
+    background-color: rgb(205, 133, 63);
+    color: white;
 }
-.footer-submit{
+
+.footer-submit {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-left: 36%;
 }
-.footer-submit button{
-     background-color: rgba(0, 0, 0);
-     font-family: 'GFS Didot', serif;
+
+.footer-submit button {
+    background-color: rgba(0, 0, 0);
+    font-family: 'GFS Didot', serif;
     font: 16px;
     width: 295px;
-    height: 30px;
+    min-height: 30px;
     color: white;
 
 }
-.footer-submit button:hover{
-    background-color: rgb(205,133,63);
+
+.footer-submit button:hover {
+    background-color: rgb(205, 133, 63);
+}
+
+@media screen and (max-width:600px) {
+    .footer {
+        overflow: hidden;
+        flex-direction: column-reverse;
+        padding-bottom: 0;
+    }
+
+    .footer-map {
+        padding-bottom: 0;
+  filter: none;
+    }
+
+    .footer-contact {
+        padding-bottom: 40px;
+        padding-top: 20px;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+.footer-contact-split {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.footer-submit {
+
+    padding-left: 0;
+}
 }
