@@ -221,7 +221,6 @@ body {
     align-items: center;
     justify-content:flex-start;
     color: white;
-    backdrop-filter: blur(10px);
     gap: 0.5vw;
     writing-mode: vertical-rl;
 }
@@ -244,7 +243,7 @@ padding: 0;}
 }
 /*Main grid*/
 .main{
-    padding: 20px 14px 20px 14px;
+    padding: 40px 14px 40px 14px;
     width: 100%;
     height: 90%;
     display: grid;
@@ -554,6 +553,98 @@ padding: 0;}
         opacity: 0;}
     100%{transform: translateX(0%);
     opacity: 1;}
+}
+/*about me*/
+.about{
+    padding: 20px 14px 20px 14px;
+    width: 100%;
+    height: 90%;
+    display: grid;
+    background-color: black;
+    color: white;
+    grid-template-columns:2.5% 15.8% 15.8% 15.8% 15.8% 15.8% 15.8% 2.5%;
+    grid-template-rows: repeat(5,20%);
+    grid-template-areas:
+    ". I A E E . . ."
+    ". I B E E F F H"
+    "D . C E E G G H"
+    "D . . E E G G H"
+    "D . . E E . . H"
+}
+.about-pic{
+    grid-area:I;
+}
+.about-title1{
+    grid-area: A;
+}
+.about-title2{
+    grid-area: B;
+}
+.about-title3{
+    grid-area: C;
+}
+.about-socialmedia{
+    grid-area: D;
+}
+.about-img{
+    grid-area: E;
+}
+.about-slogan{
+    grid-area: F;
+}
+.about-desc{
+    grid-area: G;
+}
+.about-more{
+    grid-area: H;
+}
+.about-socialmedia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 2vw;
+    gap: 1vw;
+}
+.about-pic img{
+    max-width: 200px;
+    border: 1px solid yellow;
+    border-radius: 50%;
+}
+
+.about-more{
+    z-index: 1;
+    width: max-content;
+    cursor: default;
+    font-family: 'GFS Didot', serif;
+    font-size:1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    color: white;
+    gap: 0.5vw;
+    writing-mode: vertical-rl;
+}
+.about-title h2{
+    font-family: 'GFS Didot', serif;
+    font-size:3vw;
+    padding: 0;
+    margin: 0;
+}
+
+.about-title{
+    padding-left: 5vw;
+}
+.about-slogan{
+    font-family: 'GFS Didot', serif;
+    font-size:2vw;
+    }
+.about-desc{
+    cursor: default;
+    z-index: 1;
+    font-family: 'GFS Didot', serif;
+    font-size:1vw;
+    padding-right: 2vw;
 }
 
 /*Footer*/
