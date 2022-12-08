@@ -1,0 +1,538 @@
+html,
+body {
+    width: 100%;
+    margin: 0;
+    background-color: rgb(29, 29, 31);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*navbar starts*/
+.navContainer {
+    background-color: black;
+    width: 100%;
+    height: 65px;
+    border-bottom: 2px solid rgba(250, 250, 250, 0.2);
+    top: 0;
+    position: sticky;
+    z-index: 2;
+}
+
+/*Team Orange Profile Web Name*/
+.navTitle a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    font-family: 'GFS Didot', serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/*float right navs*/
+.navIcons ul {
+    float: right;
+}
+
+.navIcons li {
+    float: Left;
+    display: block;
+    block-size: auto;
+}
+
+.navIcons a {
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 0px 16px 10px;
+    font-family: 'GFS Didot', serif;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+.navIcons a:hover {
+    color: rgb(205, 133, 63);
+}
+
+.navIconsContent {
+    z-index: 1;
+}
+
+/*Profile Dropdown*/
+.profileDropdown {
+    display: none;
+    position: absolute;
+    top: 66px;
+    right: 0;
+    background-color: rgb(205, 133, 63);
+    width: 190px;
+    z-index: 1;
+    padding-left: 0;
+}
+
+.profileDropdown li {
+    list-style: none;
+    border-top: 2px solid rgba(250, 250, 250, 0.2)
+}
+
+.profileDropdown li:first-child {
+    border-top: none;
+}
+
+.profileDropdown li a {
+    width: 200px;
+    margin-left: 0;
+    text-align: left;
+    padding-top: 10px;
+
+}
+
+.profileDropdown li:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.profileDropdown li a:hover {
+    color: white;
+}
+
+.profileToggle {
+    cursor: pointer;
+}
+
+.profileToggle.active .fa {
+    transform: rotate(180deg);
+}
+
+.profileDropdown.active {
+    display: block;
+}
+
+.navHambuger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: 5px auto;
+    background-color: white;
+    transition: 0.2s ease-in-out;
+}
+
+/*Mobile Nav Responsive*/
+@media screen and (max-width:600px) {
+    .navContainer {
+        height: 55px;
+
+    }
+
+    .navTitle a {
+        font-family: 'GFS Didot', serif;
+        font-size: 16px;
+    }
+
+    .navIcons a {
+        padding: 0;
+    }
+
+    .navIconsContent {
+        z-index: 1;
+        width: 100%;
+        position: absolute;
+        background-color: black;
+        margin-top: 55px;
+        padding-left: 0;
+        left: -100%;
+        border-bottom: 1px solid white;
+    }
+
+    .navIconsContent.active {
+        left: 0;
+    }
+
+    .navIconsContent li {
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top: 1px solid white;
+    }
+
+    .navIconsContent li a {
+        float: left;
+        font-family: 'GFS Didot', serif;
+        font-size: 16px;
+        padding-left: 14px;
+    }
+
+    .navHambuger {
+        display: block;
+        color: white;
+        float: right;
+        margin: 14px 16px 14px;
+    }
+
+    .profileDropdown {
+        background-color: rgb(205, 133, 63);
+        display: none;
+        position: relative;
+        top: 10px;
+        left: 0;
+        width: 100%;
+    }
+
+    .profileDropdown li a {
+        width: 200px;
+        margin-left: 0;
+        text-align: left;
+        padding-top: 0px;
+
+    }
+
+    .navIcons li a:hover {
+        color: rgb(218, 165, 32);
+
+    }
+
+    .navHambuger.active .bar:nth-child(1) {
+        transform: translateY(5px)rotate(45deg);
+    }
+
+    .navHambuger.active .bar:nth-child(2) {
+        transform: translateY(-2px)rotate(-45deg);
+    }
+
+    .navHambuger.active .bar:nth-child(3) {
+        display: none;
+    }
+}
+
+/*name*/
+.main-name {
+    z-index: 1;
+    width: max-content;
+    cursor: default;
+    font-family: 'GFS Didot', serif;
+    font-size: 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    gap: 0.5vw;
+    writing-mode: vertical-rl;
+}
+
+.main-name p {
+    margin: 0;
+    padding: 0;
+}
+
+.main-wave {
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.main:hover .main-wave {
+    animation-name: wave;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(8deg);
+    }
+
+    50% {
+        transform: rotate(15deg);
+    }
+
+    75% {
+        transform: rotate(8deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/*Main grid*/
+
+/*Footer*/
+.footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+
+.footer-map {
+    filter: grayscale(100%);
+}
+
+.footer-map:hover {
+    filter: grayscale(0);
+}
+
+.footer-contact {
+    font-family: 'GFS Didot', serif;
+    font-size: 16px;
+    padding-top: 30px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.footer-contact-sub {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-contact-split {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.footer-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-msg {
+    font-family: 'GFS Didot', serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-select-msg {
+    font-family: 'GFS Didot', serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-msg input[type=text] {
+    background-color: rgba(250, 250, 250, 0.15);
+    height: 100px;
+    color: white;
+    font: 16px;
+}
+
+.footer-contact-info input[type=text],
+.footer-contact-info input[type=email],
+.footer-contact-info input[type=tel] {
+    background-color: rgba(250, 250, 250, 0.15);
+    font: 16px;
+    color: white;
+}
+
+.footer-select select {
+    background-color: rgba(250, 250, 250, 0.15);
+    font: 16px;
+    color: rgba(250, 250, 250, 0.5);
+}
+
+.footer-contact-info input[type=text]:focus,
+.footer-contact-info input[type=email]:focus,
+.footer-contact-info input[type=tel]:focus,
+.footer-select select:focus {
+    background-color: rgb(205, 133, 63);
+    color: white;
+}
+
+.footer-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 36%;
+}
+
+.footer-submit button {
+    background-color: rgba(0, 0, 0);
+    font-family: 'GFS Didot', serif;
+    font: 16px;
+    width: 295px;
+    min-height: 30px;
+    color: white;
+
+}
+
+.footer-submit button:hover {
+    background-color: rgb(205, 133, 63);
+}
+
+@media screen and (max-width:600px) {
+    .footer {
+        overflow: hidden;
+        flex-direction: column-reverse;
+        padding-bottom: 0;
+    }
+
+    .footer-map {
+        padding-bottom: 0;
+        filter: none;
+    }
+
+    .footer-contact {
+        padding-bottom: 40px;
+        padding-top: 20px;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .footer-contact-split {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 14px;
+    }
+
+    .footer-submit {
+
+        padding-left: 0;
+    }
+}
+
+
+h1{
+
+    position: absolute;
+
+    font-size: 120px;
+    right: 1016px;
+    top: 40px;
+    color: #d3ac2c;
+    font-family: 'GFS Didot', serif;
+
+}
+
+h2{
+    position:absolute;
+    font-size: 120px;
+    right: 749px;
+    top: 174px;
+    color: #d3ac2c;
+    font-family: 'GFS Didot', serif;
+}
+
+.Gold{
+    position:absolute;
+    right: 311px;
+    top: 98px;
+    border: 3px solid;
+    border-color: #d3ac2c;
+}
+
+h3{
+    font-size: 25px;
+    top: 500px;
+    right: 0px;
+    padding-left: 1148px;
+    padding-top: 25px;
+    color:#d3ac2c;
+    font-family: 'GFS Didot', serif;
+}
+
+.btn{ 
+ 
+    position:relative;
+    border-radius: 5px;
+    border: none;
+    margin: 10px 0px;
+    background-image: linear-gradient(to bottom right, #d3ac2c, #d3ac2c);
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+    right: -44px;
+    top: -62px;
+    padding-left:70px;
+    padding-right:70px;
+    padding-top:10px;
+    padding-bottom: 10px;;
+  }
+
+  .btn2{
+ 
+    position:relative;
+    border-radius: 5px;
+    border: none;
+    margin: 10px 0px;
+    background-image: linear-gradient(to bottom right, #d3ac2c, #d3ac2c);
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+    right: -135px;
+    top:-62px;
+    padding-left:70px;
+    padding-right:70px;
+    padding-top:10px;
+    padding-bottom: 10px;;
+  }
+
+  h4{
+    position:absolute;
+    font-size: 55px;
+    right: 249px;
+    top: 611px;
+    color:#d3ac2c;
+    font-family: 'GFS Didot', serif;
+  }
+
+
+  
+  .lilbaby{
+    right: 0px;
+    top: -265px;
+    position:relative;
+    padding-left: 92px;
+  }
+
+  h5{
+    position:absolute;
+    font-size: 55px;
+    right: 144px;
+    top: 934px;
+    color: #d3ac2c;
+    font-family: 'GFS Didot', serif;
+  }
+
+  .carti{
+    right:0px;
+    top: -195px;
+    position:relative;
+    padding-left:715px;
+    padding-bottom: 0px;
+  }
+  
+  h6{
+    position:absolute;
+    font-size: 55px;
+    right: 894px; 
+    top: 1379px;
+    color: #d3ac2c;
+    font-family: 'GFS Didot', serif;
+  }
+
+  .yeat{
+    position: absolute;
+    top: 2310px;
+    padding-left:92px;
+    padding-bottom:0px;
+  }
