@@ -788,24 +788,29 @@ body {
         opacity: 0.5;
     }
 }
+
 /*dropping heart*/
-.heart-drop{
+.heart-drop {
     opacity: 0;
     font: 2vw;
-animation:drop 8s infinite;
+    animation: drop 8s infinite;
 }
+
 @keyframes drop {
-    0%{
-        transform: translate(5vw,0);
+    0% {
+        transform: translate(5vw, 0);
     }
-    100%{
+
+    100% {
         transform: translate(10vw, 22vh) rotate(-40deg);
-        color:red;
+        color: red;
     }
 }
-.about-desc1:hover ~.about-gallery .heart-drop{
+
+.about-desc1:hover~.about-gallery .heart-drop {
     opacity: 1;
 }
+
 /*snow*/
 .snow {
     width: 1vh;
@@ -969,16 +974,17 @@ animation:drop 8s infinite;
 @keyframes paw {
     0% {
         opacity: 1;
-        color:rgb(205, 133, 63);}
+        color: rgb(205, 133, 63);
+    }
 
     50% {
         opacity: 0;
-        color:white;
+        color: white;
     }
 
     100% {
         opacity: 0;
-       
+
     }
 }
 
@@ -1113,10 +1119,12 @@ animation:drop 8s infinite;
         opacity: 1;
         background-color: rgb(218, 165, 32);
     }
-    80%{
+
+    80% {
         background-color: rgb(218, 165, 32);
     }
-    100%{
+
+    100% {
         background-color: white;
     }
 }
@@ -1147,10 +1155,12 @@ animation:drop 8s infinite;
         opacity: 1;
         background-color: rgb(218, 165, 32);
     }
-    80%{
+
+    80% {
         background-color: rgb(218, 165, 32);
     }
-    100%{
+
+    100% {
         background-color: white;
     }
 }
@@ -1181,10 +1191,12 @@ animation:drop 8s infinite;
         opacity: 1;
         background-color: rgb(218, 165, 32);
     }
-    80%{
+
+    80% {
         background-color: rgb(218, 165, 32);
     }
-    100%{
+
+    100% {
         background-color: white;
     }
 }
@@ -1216,10 +1228,12 @@ animation:drop 8s infinite;
         opacity: 1;
         background-color: rgb(218, 165, 32);
     }
-    80%{
+
+    80% {
         background-color: rgb(218, 165, 32);
     }
-    100%{
+
+    100% {
         background-color: white;
     }
 }
@@ -1250,10 +1264,12 @@ animation:drop 8s infinite;
         opacity: 1;
         background-color: rgb(218, 165, 32);
     }
-    80%{
+
+    80% {
         background-color: rgb(218, 165, 32);
     }
-    100%{
+
+    100% {
         background-color: white;
     }
 }
@@ -1291,8 +1307,9 @@ animation:drop 8s infinite;
 .about-title {
     padding-left: 5vw;
 }
+
 /*collection*/
-.collection-container{
+.collection-container {
     width: 100%;
     max-height: 55vw;
     overflow: hidden;
@@ -1305,88 +1322,213 @@ animation:drop 8s infinite;
         ". Z Y O P Q R ."
         ". Z X S S T T ."
 }
-.collection-container img{
+
+.collection-container img {
     width: 15vw;
     height: 20.5vw;
 }
 
-.web-title{
+.web-title {
     grid-area: X;
 }
-.poster-title{
+
+.poster-title {
     grid-area: Y;
 }
-.showcase{
+
+.showcase {
     grid-area: Z;
 }
-.poster1{
+
+.poster1 {
     grid-area: O;
 }
-.poster2{
+
+.poster2 {
     grid-area: P;
 }
-.poster3{
+
+.poster3 {
     grid-area: Q;
 }
-.poster4{
-    grid-area:R;
+
+.poster4 {
+    grid-area: R;
 }
-.web1{
+
+.web1 {
     grid-area: S;
 }
-.web2{
+
+.web2 {
     grid-area: T;
 }
+
 .web1 img,
-.web2 img{
+.web2 img {
     width: 30vw;
-    height:20vw;
+    height: 20vw;
 }
+
 /*Showcase*/
-.showcase{
+.showcase {
     display: flex;
     width: fit-content;
 }
-.showcase img{
+
+.showcase img {
     width: 100%;
     height: auto;
 }
-.show-1,
+
+.socialMediaBot {
+    width: 100%;
+    max-height: 3.25vw;
+    background-color: rgb(255, 215, 0);
+    padding-top: 0.25vw;
+    padding-bottom: 0.25vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    font-size: 2.5vw;
+}
+
 .show-2,
 .show-3,
-.show-4{
+.show-4 {
     opacity: 0;
     transition: all 1s ease-in-out;
-display: flex;
-position: absolute;
-width: 26.6%;
+    display: flex;
+    position: absolute;
+    width: 26.6%;
 }
+
 /*Poster*/
 .poster-title,
-.web-title{
+.web-title {
     writing-mode: vertical-rl;
     transform: scaleX(-1) scaleY(-1);
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
 }
-.poster-date{
+
+.web1,
+.web2,
+.poster1,
+.poster2,
+.poster3,
+.poster4 {
+    display: flex;
+    flex-direction: column;
+}
+
+.poster-date {
     background-color: #0c1218;
     color: white;
     width: 15vw;
+    height: 3.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw;
 }
-.poster1:hover~.showcase .show-1{
-    opacity: 1;
-} 
-.poster2:hover~.showcase .show-2{
-    opacity: 1;
-} 
-.poster3:hover~.showcase .show-3{
-    opacity: 1;
-} 
-.poster4:hover~.showcase .show-4{
+
+.web-date {
+    background-color: #0c1218;
+    color: white;
+    width: 30vw;
+    height: 3.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw;
+}
+
+.poster1:hover~.showcase .show-1 .socialMediaBot {
+    opacity: 0;
+}
+
+.poster2:hover~.showcase .show-2 {
     opacity: 1;
 }
+
+.poster2:hover~.showcase .show-1 {
+    opacity: 0;
+}
+
+.poster3:hover~.showcase .show-3 {
+    opacity: 1;
+}
+
+.poster3:hover~.showcase .show-1 {
+    opacity: 0;
+}
+
+.poster4:hover~.showcase .show-4 {
+    opacity: 1;
+}
+
+.poster4:hover~.showcase .show-1 {
+    opacity: 0;
+}
+
+@media screen and (max-width:600px) {
+    .collection-container {
+        padding: 0;
+        max-height: fit-content;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "Y Y"
+            "O P"
+            "Q R"
+            "X X"
+            "S S"
+            "T T"
+    }
+
+    .web-title {
+        grid-area: X;
+    }
+
+    .poster-title {
+        grid-area: Y;
+    }
+
+    .poster-title,
+    .web-title {
+        writing-mode: unset;
+        transform: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(205, 133, 63);
+        color: white;
+        height: 5vh;
+    }
+
+    .showcase {
+        display: none;
+    }
+
+    .collection-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .poster-date{
+        font-size: 2vw;
+        width: 100%
+    }
+    .web-date{
+        font-size: 2vw;
+        width: 100%;
+    }
+
+}
+
 /*Footer*/
 .footer {
     background-color: black;
