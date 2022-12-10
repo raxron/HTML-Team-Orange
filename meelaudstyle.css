@@ -210,8 +210,11 @@ body {
 .top-box {
     width: 100%;
     height: 570px;
+    max-height: min-content;
     background-color: #3a3a3c;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .title {
@@ -224,9 +227,8 @@ body {
 
 }
 
-.Bike {
-    display: flex;
-    padding-top: 65px;
+.bike-pic {
+    width: 600px;
 
 }
 
@@ -236,20 +238,26 @@ body {
     padding-left: 130px;
     padding-right: 130px;
     padding-top: 40px;
-    
+    padding-bottom: 40px;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .intro-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 50px;
 }
 
 
 .profile-pic {
-    width: 250px;
-    height: 250px;
-    
+    width: 425px;
+    height: 425px;
+    padding-left: 250px;
+    max-height: 100%;
+    overflow: auto;
+    display: flex;
 }
 
 .stats {
@@ -267,7 +275,6 @@ body {
     background-color: #3a3a3c;
     padding-left: 130px;
     padding-right: 130px;
-    padding-top: 40px;
     display: flex;
 }
 
@@ -289,13 +296,15 @@ body {
     font-size: 34px;
     color: white;
     margin-top: 0;
+    max-height: 100%;
+    overflow: auto;
 }
 
 .icons {
     display: flex;
-    column-gap: 150px;
-    padding-top: 200px;
-
+    column-gap: 80px;
+    padding-top: 125px;
+    padding-bottom: 125px;
 }
 
 
@@ -303,10 +312,14 @@ body {
     height: 625px;
     margin-left: 130px;
     margin-right: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
 }
 
 .list-box {
-    height: 625px;
+    height: 670px;
     width: 450px;
     background-color: #3a3a3c;
     padding-left: 30px;
@@ -314,16 +327,197 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'GFS Didot', serif;
+    font-size: 32px;
+    color: white;
 }
 
 .hobby-title {
     font-family: 'GFS Didot', serif;
-    font-size: 32px;
+    font-size: 40px;
     color: white;
     font-weight: lighter;
     padding-top: 28px;
+    border-bottom: 3px solid white
 }
 
-.hobby-list {
+.pic-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    size-adjust: 30px;
+}
 
+.hobby-pics {
+    border: 25px solid #3a3a3c;
+    max-height: 270;
+}
+
+.project-container {
+    height: 900px;
+    background-color: #3a3a3c;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 70px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.pro-pics {
+    width: 500px;
+    height: 600px;
+    padding-top: 200px;
+}
+
+.pro-title {
+    font-family: 'GFS Didot', serif;
+    font-size: 60px;
+    color: white;
+    font-weight: lighter;
+}
+
+.footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+
+.footer-map {
+    filter: grayscale(100%);
+}
+
+.footer-map:hover {
+    filter: grayscale(0);
+}
+
+.footer-contact {
+    font-family: 'GFS Didot', serif;
+    font-size: 16px;
+    padding-top: 30px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.footer-contact-sub {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-contact-split {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.footer-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-msg {
+    font-family: 'GFS Didot', serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-select-msg {
+    font-family: 'GFS Didot', serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-msg input[type=text] {
+    background-color: rgba(250, 250, 250, 0.15);
+    height: 100px;
+    color: white;
+    font: 16px;
+}
+
+.footer-contact-info input[type=text],
+.footer-contact-info input[type=email],
+.footer-contact-info input[type=tel] {
+    background-color: rgba(250, 250, 250, 0.15);
+    font: 16px;
+    color: white;
+}
+
+.footer-select select {
+    background-color: rgba(250, 250, 250, 0.15);
+    font: 16px;
+    color: rgba(250, 250, 250, 0.5);
+}
+
+.footer-contact-info input[type=text]:focus,
+.footer-contact-info input[type=email]:focus,
+.footer-contact-info input[type=tel]:focus,
+.footer-select select:focus {
+    background-color: rgb(205, 133, 63);
+    color: white;
+}
+
+.footer-submit {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.footer-submit button {
+    background-color: rgba(0, 0, 0);
+    font-family: 'GFS Didot', serif;
+    font: 16px;
+    width: 300px;
+    min-height: 30px;
+    color: white;
+    border: 0.15vw solid rgba(250, 250, 250, 0.5);;
+}
+
+.footer-submit button:hover {
+    background-color: rgb(205, 133, 63);
+}
+
+@media screen and (max-width:600px) {
+    .footer {
+        overflow: hidden;
+        flex-direction: column-reverse;
+        padding-bottom: 0;
+    }
+
+    .footer-map {
+        padding-bottom: 0;
+        filter: none;
+    }
+
+    .footer-contact {
+        padding-bottom: 40px;
+        padding-top: 20px;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .footer-contact-split {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 14px;
+    }
+
+    .footer-submit {
+
+        padding-left: 0;
+    }
 }
