@@ -227,9 +227,32 @@ body {
 
 }
 
+
 .bike-pic {
     width: 600px;
+    animation-name: moving-bike;
+    animation-duration: 6.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    position: relative;
+}
 
+@keyframes moving-bike {
+    0% {
+        left: -30%;
+    } 
+    20% {
+        left: 10%;
+    }
+    30% {
+        left: 30%;
+    }
+    50% {
+        left: 50%;
+    }
+    100% {
+        left: 60%
+    }
 }
 
 .intro-box {
