@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aldrinstyle.css">
+    <title>Aldrin's Page</title>
+</head>
+<body>
+        <!--Navigation Bar-->
+        <div class="navContainer">
+            <div class="navTitle"><a href="#">Team Orange Profile</a></div>
+            <div class="navIcons" id="navDropdown">
+                <div class="navHambuger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <nav>
+                    <ul class="navIconsContent" data-visibility="false" id="navIconsContent">
+                        <li class="homeContainer"><a href="index.html">Home</a></li>
+                        <li class="profileContainer" id="profileResDropdown">
+                            <div class="profileToggle"><a>Profiles
+                                    <i class="fa fa-caret-down" aria-hidden="true" class="profileDown"></i>
+                                </a></div>
+                            <ul class="profileDropdown">
+                                <li><a href="aldrin.html">Estrada, Aldrin</a></li>
+                                <li><a href="#">McGuire, Hudson</a></li>
+                                <li><a href="#">Mortel, Leevon</a></li>
+                                <li><a href="#">Totonchi, Meelaud</a></li>
+                                <li><a href="rachel.html">Xia, Rachel</a></li>
+                            </ul>
+                        </li>
+                        <li class="searchContainer"><a href="search">Search</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        
+
+
+        <!--Body-->
+
+
+            <div class="hello">
+                Hello, I'm
+            </div>
+
+            <div class="name">Aldrin Estrada</div>
+            <div class="intro-description">BCIT D3 Student</div>
+            <div class="profile-pic">
+                <img src="aldrinimg\shinji.jpg" alt="" width="440px" height="490px">
+            </div>
+            
+            
+        </div>
+
+        
+
+        <div class="logif">
+            <img src="aldrinimg/lo-fi.gif" alt="" width="1818px" height="1005px">
+        </div>
+        <div class="about-block">
+            <h2>"lmao"</h2>
+            <h2>About Me:</h2>
+            <p>A total weeb</p>
+            <p>Loves to play games and sports</p>
+            <p>Owns a smol doggo</p>
+        </div>
+        
+
+        <div class="portfolio-container">
+            <h2 class="portfolio-header">Portfolio</h2>
+                <img class="gun" src="aldrinimg/project-1.png" alt="">
+
+            <img class="site" src="aldrinimg/project-2.png" alt="">
+            <div class="liberty"><img src="aldrinimg/project-3.png" alt="" width="350px" height="650px"></div>
+            <button class="button-hire" role="button">Hire Me</button>
+           
+        </div>
+
+
+
+        <div class="bottom">
+              <!--footer-->
+    <div class="footer">
+        <div>
+            <iframe class="footer-map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83222.77611550268!2d-123.16655888422888!3d49.319742190870464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548677fbee571723%3A0xd2bb68f1a0a7059d!2sBCIT%20SE14%20North%20Gate!5e0!3m2!1sen!2sca!4v1669147153346!5m2!1sen!2sca"
+                width="100%" height="150vh" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="footer-contact">
+            <div>
+                <h2>How to Contact Us</h2>
+            </div>
+            <div class="footer-contact-sub">
+                <div class="footer-contact-split">
+                    <div class="footer-contact-info">
+                        <label for="name">Preferred Name</label>
+                        <input type="text" id="name" name="name" placeholder="Name*">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email*">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
+                    </div>
+                    <div class="footer-select-msg">
+                        <div class="footer-select">
+                            <label for="select-designer">Preferred Designer</label>
+                            <select name="select-designer" id="select-designer">
+                                <option value="1">Rachel</option>
+                                <option value="2" selected="selected">Aldrin</option>
+                                <option value="3">Agent A</option>
+                                <option value="3">Agent B</option>
+                                <option value="3">Agent B</option>
+                                <option value="3">Agent B</option>
+                            </select>
+                        </div>
+                        <div class="footer-msg">
+                            <label for="msg">Leave Us a Message</label>
+                            <input type="text" name="msg" id="msg"
+                                placeholder="We will get back to you within 24 hours!">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-submit"><button type="submit" for="msg">Reach Your Designer Today</button></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
